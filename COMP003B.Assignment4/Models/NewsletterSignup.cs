@@ -14,7 +14,5 @@ namespace COMP003B.Assignment4.Models
         [EmailAddress]
         public string Email { get; set; }
 
-        [Display(Name = "Receive Promotions")]
-        public bool ReceivePromotions { get; set; }
     }
 }
