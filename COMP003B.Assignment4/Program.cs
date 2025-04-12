@@ -1,4 +1,3 @@
-using COMP003B.Assignment4.Middleware;
 
 namespace COMP003B.Assignment4
 {
@@ -24,7 +23,6 @@ namespace COMP003B.Assignment4
             app.UseHttpsRedirection();
             app.UseStaticFiles();
 
-            app.UseMiddleware<RequestLoggerMiddleware>();
 
             app.UseRouting();
 
