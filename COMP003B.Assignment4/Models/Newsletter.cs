@@ -8,7 +8,8 @@ namespace COMP003B.Assignment4.Models
             public int Id { get; set; }
 
             [Required(ErrorMessage = "Please enter your name")]
-            public string Name { get; set; }
+        [StringLength(50, ErrorMessage = "Name cannot be longer than 50 characters")]
+        public string Name { get; set; }
 
             [Required(ErrorMessage = "Please enter your email")]
             [EmailAddress(ErrorMessage = "Invalid email address")]

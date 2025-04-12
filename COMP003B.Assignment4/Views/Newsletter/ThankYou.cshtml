@@ -1,4 +1,7 @@
-﻿@page
-@model COMP003B.Assignment4.Views.Newsletter.ThankYouModel
-@{
+﻿@{
+    ViewData["Title"] = "Thank You";
 }
+
+<h1>Thank You for Signing Up!</h1>
+<p>We'll send our newsletter to your email soon.</p>
+<a asp-action="SignUp" class="btn btn-secondary">Sign Up Another Email</a>

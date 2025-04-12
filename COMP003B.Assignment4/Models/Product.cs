@@ -16,7 +16,6 @@ namespace COMP003B.Assignment4.Models
         [Required]
         public string ImageName { get; set; }
 
-        [StringLength(500)]
         public string Description { get; set; }
     }
 }

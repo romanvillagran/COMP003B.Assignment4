@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using COMP003B.Assignment4.Models;
+using Microsoft.AspNetCore.Mvc;
 
 namespace COMP003B.Assignment4.Controllers
 {
@@ -9,14 +10,19 @@ namespace COMP003B.Assignment4.Controllers
             return View();
         }
 
+        // POST: Process the form submission
         [HttpPost]
-        public IActionResult SignUp(Newsletter signup)
+        
+        public IActionResult SignUp(Newsletter newsletter)
         {
             if (ModelState.IsValid)
             {
+                // Here you would normally save to database
                 return RedirectToAction("ThankYou");
             }
-            return View(signup);
+
+            // If we got here, something failed - redisplay form
+            return View(newsletter);
         }
 
         public IActionResult ThankYou()
@@ -24,9 +30,4 @@ namespace COMP003B.Assignment4.Controllers
             return View();
         }
     }
-
-    public class Newsletter
-    {
-    }
 }
-

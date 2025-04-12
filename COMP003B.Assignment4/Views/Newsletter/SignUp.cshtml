@@ -3,20 +3,26 @@
     ViewData["Title"] = "Newsletter Sign Up";
 }
 
-<h1>Sign Up</h1>
+<h1>Newsletter Sign Up</h1>
 
-<form method="post">
-    <div class="field">
-        <label>Your Name:</label>
-        <input asp-for="Name" />
-        <span asp-validation-for="Name" class="error"></span>
+<form asp-action="SignUp" method="post">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    
+    <div class="form-group">
+        <label asp-for="Name" class="control-label"></label>
+        <input asp-for="Name" class="form-control" />
+        <span asp-validation-for="Name" class="text-danger"></span>
     </div>
     
-    <div class="field">
-        <label>Your Email:</label>
-        <input asp-for="Email" />
-        <span asp-validation-for="Email" class="error"></span>
+    <div class="form-group">
+        <label asp-for="Email" class="control-label"></label>
+        <input asp-for="Email" class="form-control" />
+        <span asp-validation-for="Email" class="text-danger"></span>
     </div>
     
-    <button type="submit">Sign Up</button>
+    <button type="submit" class="btn btn-primary">Sign Up</button>
 </form>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
