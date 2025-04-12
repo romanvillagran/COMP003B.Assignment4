@@ -1,1 +1,15 @@
-﻿
+﻿@{
+    ViewData["Title"] = "Our Water Bottles";
+}
+
+<h1>Our Bottles</h1>
+
+@foreach (var bottle in Model)
+{
+    <div class="bottle">
+        <h3>@bottle.Name</h3>
+        <img src="~/images/@bottle.ImageName" width="150" />
+        <p>Price: $@bottle.Price</p>
+        <p>@bottle.Description</p>
+    </div>
+}
