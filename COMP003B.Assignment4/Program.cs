@@ -1,3 +1,5 @@
+using COMP003B.Assignment4.Middleware;
+
 namespace COMP003B.Assignment4
 {
     public class Program
