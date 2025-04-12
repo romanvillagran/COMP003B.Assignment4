@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace COMP003B.Assignment4.Controllers
 {
-    [Route("products")]
+    [Microsoft.AspNetCore.Mvc.Route("products")]
 
     public class ProductsController : Controller
     {
@@ -16,7 +16,6 @@ namespace COMP003B.Assignment4.Controllers
     };
         private string? bottles;
 
-        // Show all bottles
         [HttpGet("all")]
         public IActionResult Index()
         {
