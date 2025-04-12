@@ -1,4 +1,6 @@
 using System.Diagnostics;
+using System.Diagnostics.Metrics;
+using System.Security.Cryptography;
 using COMP003B.Assignment4.Models;
 using Microsoft.AspNetCore.Mvc;
 
@@ -27,6 +29,11 @@ namespace COMP003B.Assignment4.Controllers
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        }
+
+        public IActionResult History()
+        {
+            return View();
         }
     }
 }
