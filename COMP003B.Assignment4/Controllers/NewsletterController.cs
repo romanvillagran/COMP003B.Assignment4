@@ -10,18 +10,15 @@ namespace COMP003B.Assignment4.Controllers
             return View();
         }
 
-        // POST: Process the form submission
         [HttpPost]
         
         public IActionResult SignUp(Newsletter newsletter)
         {
             if (ModelState.IsValid)
             {
-                // Here you would normally save to database
                 return RedirectToAction("ThankYou");
             }
 
-            // If we got here, something failed - redisplay form
             return View(newsletter);
         }
 
